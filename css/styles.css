@@ -1,0 +1,1930 @@
+/* ==========================================================================
+   Font Declarations (Paths relative to /css/ directory)
+   ========================================================================== */
+@font-face {
+  font-family: 'Allura';
+  src: url('../fonts/Allura-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Cormorant Garamond';
+  src: url('../fonts/CormorantGaramond-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Cormorant Garamond';
+  src: url('../fonts/CormorantGaramond-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Jost';
+  src: url('../fonts/Jost-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Jost';
+  src: url('../fonts/Jost-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Jost';
+  src: url('../fonts/Jost-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* ==========================================================================
+   Variables & Reset
+   ========================================================================== */
+:root {
+  --font-logo: 'Allura', cursive;
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Jost', sans-serif;
+  
+  --color-dark: #121212;
+  --color-gold: #ab8e66;
+  --color-text: #2c2a29;
+  --color-border: rgba(18, 18, 18, 0.25);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--color-dark);
+  background-color: #e5ded5;
+  overflow-x: hidden;
+}
+
+/* ==========================================================================
+   Header & Navigation
+   ========================================================================== */
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 4rem;
+  z-index: 100;
+}
+
+.logo {
+  font-family: var(--font-logo);
+  font-size: 2.8rem;
+  color: var(--color-dark);
+  text-decoration: none;
+  line-height: 1;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2.5rem;
+}
+
+.nav-links a {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  color: var(--color-dark);
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.nav-links a:hover {
+  opacity: 0.6;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.divider-line {
+  display: inline-block;
+  width: 1px;
+  height: 24px;
+  background-color: var(--color-border);
+}
+
+.btn-portal {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  color: var(--color-dark);
+  text-decoration: none;
+  border: 1px solid var(--color-border);
+  padding: 0.65rem 1.25rem;
+  transition: all 0.3s ease;
+}
+
+.btn-portal:hover {
+  background-color: var(--color-dark);
+  color: #ffffff;
+}
+
+.mobile-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.mobile-toggle span {
+  width: 24px;
+  height: 1px;
+  background-color: var(--color-dark);
+}
+
+/* ==========================================================================
+   Hero Section
+   ========================================================================== */
+
+   .hero {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 6rem 4rem 2rem 6rem;
+  position: relative;
+  overflow: hidden; /* Keeps the image contained */
+}
+
+.hero-background-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the section like a background */
+  z-index: -1; /* Pushes the image behind the text */
+}
+.hero-content {
+  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.hero-subtitle {
+  font-size: 0.75rem;
+  letter-spacing: 0.25em;
+  color: var(--color-gold);
+  font-weight: 400;
+}
+
+.diamond-icon {
+  font-size: 0.6rem;
+  color: var(--color-gold);
+  margin: 0.75rem 0 0.5rem 0;
+}
+
+.hero-accent {
+  font-size: 0.75rem;
+  letter-spacing: 0.22em;
+  color: var(--color-gold);
+  margin-bottom: 1rem;
+}
+
+.hero-title {
+  font-family: var(--font-serif);
+  font-size: 4.2rem;
+  font-weight: 400;
+  line-height: 1.05;
+  color: var(--color-dark);
+  margin-bottom: 2rem;
+}
+
+.content-line {
+  width: 40px;
+  height: 1px;
+  background-color: var(--color-dark);
+  margin-bottom: 2rem;
+  opacity: 0.4;
+}
+
+.hero-description {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--color-text);
+  font-weight: 300;
+  margin-bottom: 2.5rem;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 1.5rem;
+  background-color: var(--color-dark);
+  color: #ffffff;
+  padding: 1.1rem 2rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+  text-decoration: none;
+  transition: opacity 0.3s ease, transform 0.2s ease;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.btn-primary .arrow {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+/* ==========================================================================
+   Responsive Styles
+   ========================================================================== */
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 1.5rem 2rem;
+  }
+  
+  .nav-links {
+    display: none;
+  }
+
+  .nav-links.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #e5ded5;
+    padding: 2rem;
+    gap: 1.5rem;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+  }
+
+  .mobile-toggle {
+    display: flex;
+  }
+
+  .hero {
+    padding: 8rem 2rem 4rem 2rem;
+  }
+
+  .hero-title {
+    font-size: 3.2rem;
+  }
+}
+/* ==========================================================================
+   Philosophy Section
+   ========================================================================== */
+.philosophy {
+  width: 100%;
+  background-color: #e5ded5;
+  padding: 8rem 4rem 6rem 6rem;
+  position: relative;
+}
+
+.philosophy-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  margin-bottom: 6rem;
+}
+
+.philosophy-text {
+  flex: 0 0 42%;
+  max-width: 480px;
+}
+
+.section-label {
+  display: block;
+  font-size: 0.7rem;
+  letter-spacing: 0.25em;
+  color: var(--color-gold);
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+}
+
+.section-title {
+  font-family: var(--font-serif);
+  font-size: 3.2rem;
+  font-weight: 400;
+  line-height: 1.1;
+  color: var(--color-dark);
+  margin-bottom: 1.5rem;
+}
+
+.philosophy-text .content-line {
+  width: 40px;
+  height: 1px;
+  background-color: var(--color-dark);
+  margin-bottom: 1.5rem;
+  opacity: 0.4;
+}
+
+.section-description {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--color-text);
+  font-weight: 300;
+  margin-bottom: 2rem;
+}
+
+.philosophy-signature {
+  font-family: var(--font-logo);
+  font-size: 1.6rem;
+  color: var(--color-dark);
+  opacity: 0.85;
+  display: inline-block;
+}
+
+.philosophy-image {
+  flex: 0 0 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.philosophy-image img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+/* ==========================================================================
+   Philosophy Features Grid
+   ========================================================================== */
+.philosophy-features {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 3rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding-top: 4rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.feature-item {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.feature-icon {
+  color: var(--color-dark);
+  margin-bottom: 1.25rem;
+  opacity: 0.7;
+}
+
+.feature-title {
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  font-weight: 500;
+  color: var(--color-dark);
+  margin-bottom: 0.75rem;
+}
+
+.feature-desc {
+  font-size: 0.8rem;
+  line-height: 1.6;
+  color: var(--color-text);
+  font-weight: 300;
+  max-width: 200px;
+}
+
+/* ==========================================================================
+   Responsive Styles (add inside existing @media or create new)
+   ========================================================================== */
+@media (max-width: 1024px) {
+  .philosophy {
+    padding: 5rem 2rem 4rem 2rem;
+  }
+
+  .philosophy-container {
+    flex-direction: column-reverse;
+    gap: 3rem;
+    margin-bottom: 4rem;
+  }
+
+  .philosophy-text {
+    flex: 1;
+    max-width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .section-title {
+    font-size: 2.6rem;
+  }
+
+  .philosophy-image {
+    flex: 1;
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .philosophy-features {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem 2rem;
+  }
+
+  .feature-item {
+    text-align: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .philosophy-features {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .section-title {
+    font-size: 2.2rem;
+  }
+}
+/* ==========================================================================
+   Journey / Process Section
+   ========================================================================== */
+.journey {
+  width: 100%;
+  background-color: #e5ded5;
+  padding: 8rem 4rem 6rem 6rem;
+}
+
+.journey-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 5rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.journey-intro {
+  flex: 0 0 32%;
+  max-width: 380px;
+}
+
+.journey-intro .section-title {
+  font-size: 2.6rem;
+  line-height: 1.15;
+}
+
+.journey-steps {
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1.5rem;
+  position: relative;
+  padding-top: 0.5rem;
+}
+
+.steps-connector {
+  position: absolute;
+  top: 30px;
+  left: 60px;
+  right: 60px;
+  height: 1px;
+  border-top: 1px dashed var(--color-border);
+  z-index: 0;
+}
+
+.step-item {
+  flex: 1;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.step-icon-wrap {
+  width: 60px;
+  height: 60px;
+  background-color: var(--color-dark);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  color: var(--color-gold);
+}
+
+.step-number {
+  display: block;
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  color: var(--color-gold);
+  margin-bottom: 0.75rem;
+}
+
+.step-title {
+  font-size: 0.65rem;
+  letter-spacing: 0.18em;
+  font-weight: 500;
+  color: var(--color-dark);
+  margin-bottom: 0.75rem;
+}
+
+.step-desc {
+  font-size: 0.8rem;
+  line-height: 1.6;
+  color: var(--color-text);
+  font-weight: 300;
+  max-width: 170px;
+  margin: 0 auto;
+}
+
+/* ==========================================================================
+   Always With You Section
+   ========================================================================== */
+.always {
+  width: 100%;
+  display: flex;
+  min-height: 520px;
+}
+
+.always-image {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  min-height: 520px;
+}
+
+.always-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.always-content {
+  flex: 1;
+  background-color: var(--color-dark);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 4rem;
+}
+
+.always-title {
+  font-family: var(--font-serif);
+  font-size: 2.8rem;
+  font-weight: 400;
+  color: var(--color-gold);
+  margin-bottom: 1.5rem;
+}
+
+.always-desc {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 300;
+  max-width: 360px;
+  margin-bottom: 2rem;
+}
+
+.always-divider {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.divider-line-h {
+  display: inline-block;
+  width: 50px;
+  height: 1px;
+  background-color: rgba(171, 142, 102, 0.35);
+}
+
+.divider-diamond {
+  font-size: 0.65rem;
+  color: var(--color-gold);
+}
+
+/* ==========================================================================
+   Journey & Always Responsive Styles
+   ========================================================================== */
+@media (max-width: 1024px) {
+  .journey {
+    padding: 5rem 2rem 4rem 2rem;
+  }
+
+  .journey-container {
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .journey-intro {
+    flex: 1;
+    max-width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .journey-intro .section-title {
+    font-size: 2.4rem;
+  }
+
+  .journey-steps {
+    flex-wrap: wrap;
+    gap: 2.5rem 1rem;
+  }
+
+  .steps-connector {
+    display: none;
+  }
+
+  .step-item {
+    flex: 0 0 45%;
+  }
+
+  .always {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .always-image {
+    min-height: 350px;
+  }
+
+  .always-content {
+    padding: 4rem 2rem;
+  }
+
+  .always-title {
+    font-size: 2.4rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .step-item {
+    flex: 0 0 100%;
+  }
+
+  .always-image {
+    min-height: 280px;
+  }
+
+  .always-title {
+    font-size: 2rem;
+  }
+}
+/* ==========================================================================
+   Services Section
+   ========================================================================== */
+.services {
+  width: 100%;
+  background-image: url('../images/services.png');
+  background-size: cover;
+  background-position: bottom left;
+  background-repeat: no-repeat;
+  background-color: #e5ded5;
+  padding: 8rem 4rem 6rem 6rem;
+  position: relative;
+}
+
+.services-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 5rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.services-intro {
+  flex: 0 0 30%;
+  max-width: 360px;
+  padding-top: 1rem;
+}
+
+.services-intro .section-title {
+  font-size: 2.6rem;
+  line-height: 1.15;
+}
+
+.services-intro .section-description {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: var(--color-text);
+  font-weight: 300;
+  margin-bottom: 2.5rem;
+}
+
+.services-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  color: var(--color-dark);
+  text-decoration: none;
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 0.5rem;
+  transition: opacity 0.3s ease;
+}
+
+.services-cta:hover {
+  opacity: 0.6;
+}
+
+.services-cta .arrow {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.services-grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  position: relative;
+}
+
+.service-card {
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+}
+
+/* Vertical dividers */
+.service-card:nth-child(1),
+.service-card:nth-child(2),
+.service-card:nth-child(4),
+.service-card:nth-child(5) {
+  border-right: 1px solid var(--color-border);
+}
+
+/* Horizontal dividers for second row */
+.service-card:nth-child(4),
+.service-card:nth-child(5),
+.service-card:nth-child(6) {
+  border-top: 1px solid var(--color-border);
+}
+
+.service-icon {
+  color: var(--color-dark);
+  margin-bottom: 1.25rem;
+  opacity: 0.7;
+}
+
+.service-number {
+  display: block;
+  font-family: var(--font-logo);
+  font-size: 1.4rem;
+  color: var(--color-dark);
+  opacity: 0.5;
+  margin-bottom: 1rem;
+  line-height: 1;
+}
+
+.service-title {
+  font-size: 0.65rem;
+  letter-spacing: 0.18em;
+  font-weight: 500;
+  color: var(--color-dark);
+  margin-bottom: 0.75rem;
+  line-height: 1.5;
+}
+
+.service-desc {
+  font-size: 0.8rem;
+  line-height: 1.6;
+  color: var(--color-text);
+  font-weight: 300;
+}
+
+/* ==========================================================================
+   Services Responsive Styles
+   ========================================================================== */
+@media (max-width: 1024px) {
+  .services {
+    padding: 5rem 2rem 4rem 2rem;
+    background-position: bottom center;
+  }
+
+  .services-container {
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .services-intro {
+    flex: 1;
+    max-width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .services-intro .section-title {
+    font-size: 2.4rem;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Reset borders for 2-column layout */
+  .service-card {
+    border-right: none !important;
+    border-top: none !important;
+  }
+
+  .service-card:nth-child(odd) {
+    border-right: 1px solid var(--color-border) !important;
+  }
+
+  .service-card:nth-child(3),
+  .service-card:nth-child(4),
+  .service-card:nth-child(5),
+  .service-card:nth-child(6) {
+    border-top: 1px solid var(--color-border) !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-card {
+    border-right: none !important;
+    border-top: none !important;
+    text-align: center;
+    align-items: center;
+  }
+
+  .service-card + .service-card {
+    border-top: 1px solid var(--color-border) !important;
+  }
+}
+/* ==========================================================================
+   Our Breeds Section
+   ========================================================================== */
+.breeds {
+  width: 100%;
+  background-color: #e5ded5;
+  padding: 8rem 4rem 6rem 6rem;
+}
+
+.breeds-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 4rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.breeds-intro {
+  flex: 0 0 26%;
+  max-width: 320px;
+  padding-top: 1rem;
+}
+
+.breeds-intro .section-title {
+  font-size: 2.6rem;
+  line-height: 1.15;
+}
+
+.breeds-intro .section-description {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: var(--color-text);
+  font-weight: 300;
+  margin-bottom: 2.5rem;
+}
+
+.breeds-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  color: var(--color-dark);
+  text-decoration: none;
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 0.5rem;
+  transition: opacity 0.3s ease;
+}
+
+.breeds-cta:hover {
+  opacity: 0.6;
+}
+
+.breeds-cta .arrow {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.breeds-grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.75rem;
+}
+
+.breed-card {
+  position: relative;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.breed-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.breed-card:hover img {
+  transform: scale(1.05);
+}
+
+.breed-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(to top, rgba(18, 18, 18, 0.75) 0%, rgba(18, 18, 18, 0) 100%);
+  pointer-events: none;
+}
+
+.breed-name {
+  position: absolute;
+  bottom: 1rem;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 0.6rem;
+  letter-spacing: 0.15em;
+  font-weight: 500;
+  color: #ffffff;
+  z-index: 2;
+  padding: 0 0.5rem;
+}
+
+/* ==========================================================================
+   Breeds Responsive Styles
+   ========================================================================== */
+@media (max-width: 1024px) {
+  .breeds {
+    padding: 5rem 2rem 4rem 2rem;
+  }
+
+  .breeds-container {
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .breeds-intro {
+    flex: 1;
+    max-width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .breeds-intro .section-title {
+    font-size: 2.4rem;
+  }
+
+  .breeds-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .breeds-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.4rem;
+  }
+
+  .breed-name {
+    font-size: 0.55rem;
+    letter-spacing: 0.1em;
+    bottom: 0.75rem;
+  }
+}
+.breed-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+/* ==========================================================================
+   Closing Statement Section
+   ========================================================================== */
+.closing {
+  width: 100%;
+  display: flex;
+  min-height: 600px;
+  background-color: var(--color-dark);
+}
+
+.closing-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 6rem 4rem 6rem 6rem;
+  max-width: 540px;
+}
+
+.closing-logo {
+  font-family: var(--font-logo);
+  font-size: 2.4rem;
+  color: var(--color-gold);
+  display: block;
+  margin-bottom: 3rem;
+  line-height: 1;
+}
+
+.closing-statements p {
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  color: var(--color-gold);
+  font-weight: 400;
+  line-height: 1.8;
+  margin: 0;
+}
+
+.closing-divider {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 3rem;
+}
+
+.closing-line {
+  display: inline-block;
+  width: 30px;
+  height: 1px;
+  background-color: rgba(171, 142, 102, 0.35);
+}
+
+.closing-diamond {
+  font-size: 0.6rem;
+  color: var(--color-gold);
+}
+
+.closing-image {
+  flex: 1.2;
+  position: relative;
+  overflow: hidden;
+  min-height: 600px;
+}
+
+.closing-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ==========================================================================
+   Closing Statement Section — Full Background
+   ========================================================================== */
+.closing {
+  width: 100%;
+  min-height: 600px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.closing-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.closing-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.closing-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(18, 18, 18, 0.92) 0%, rgba(18, 18, 18, 0.75) 45%, rgba(18, 18, 18, 0.3) 100%);
+  z-index: 1;
+}
+
+.closing-content {
+  position: relative;
+  z-index: 2;
+  padding: 6rem 4rem 6rem 6rem;
+  max-width: 540px;
+}
+
+.closing-logo {
+  font-family: var(--font-logo);
+  font-size: 2.4rem;
+  color: var(--color-gold);
+  display: block;
+  margin-bottom: 3rem;
+  line-height: 1;
+}
+
+.closing-statements p {
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  color: var(--color-gold);
+  font-weight: 400;
+  line-height: 1.8;
+  margin: 0;
+}
+
+.closing-divider {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 3rem;
+}
+
+.closing-line {
+  display: inline-block;
+  width: 30px;
+  height: 1px;
+  background-color: rgba(171, 142, 102, 0.35);
+}
+
+.closing-diamond {
+  font-size: 0.6rem;
+  color: var(--color-gold);
+}
+/* ==========================================================================
+   Closing Statement Section — Full Background
+   ========================================================================== */
+.closing {
+  width: 100%;
+  min-height: 700px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.closing-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.closing-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.closing-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(18, 18, 18, 0.92) 0%, rgba(18, 18, 18, 0.75) 45%, rgba(18, 18, 18, 0.3) 100%);
+  z-index: 1;
+}
+
+.closing-content {
+  position: relative;
+  z-index: 2;
+  padding: 8rem 6rem 8rem 8rem;
+  max-width: 700px;
+}
+
+.closing-logo {
+  font-family: var(--font-logo);
+  font-size: 4.8rem;
+  color: var(--color-gold);
+  display: block;
+  margin-bottom: 4rem;
+  line-height: 1;
+}
+
+.closing-statements p {
+  font-size: 1.5rem;
+  letter-spacing: 0.2em;
+  color: var(--color-gold);
+  font-weight: 400;
+  line-height: 1.8;
+  margin: 0;
+}
+
+.closing-divider {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 4rem;
+}
+
+.closing-line {
+  display: inline-block;
+  width: 60px;
+  height: 1px;
+  background-color: rgba(171, 142, 102, 0.35);
+}
+
+.closing-diamond {
+  font-size: 1.2rem;
+  color: var(--color-gold);
+}
+
+/* ==========================================================================
+   Closing Statement Responsive Styles
+   ========================================================================== */
+@media (max-width: 1024px) {
+  .closing {
+    min-height: 600px;
+  }
+
+  .closing-content {
+    padding: 5rem 3rem;
+    text-align: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  .closing-logo {
+    font-size: 4rem;
+    margin-bottom: 3rem;
+  }
+
+  .closing-statements p {
+    font-size: 1.4rem;
+    letter-spacing: 0.18em;
+  }
+
+  .closing-divider {
+    margin-top: 3rem;
+    justify-content: center;
+  }
+
+  .closing-overlay {
+    background: linear-gradient(to right, rgba(18, 18, 18, 0.9) 0%, rgba(18, 18, 18, 0.8) 60%, rgba(18, 18, 18, 0.5) 100%);
+  }
+}
+
+@media (max-width: 640px) {
+  .closing {
+    min-height: 500px;
+  }
+
+  .closing-logo {
+    font-size: 3.6rem;
+  }
+
+  .closing-statements p {
+    font-size: 1.2rem;
+    letter-spacing: 0.15em;
+  }
+}
+/* ==========================================================================
+   Contact / Footer Section
+   ========================================================================== */
+.contact {
+  width: 100%;
+  background-color: #e5ded5;
+  padding: 8rem 4rem 6rem 6rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-decoration {
+  position: absolute;
+  bottom: 0;
+  left: -20px;
+  opacity: 0.4;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.contact-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 4rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* Left Column: Intro */
+.contact-intro {
+  flex: 0 0 26%;
+  max-width: 300px;
+  padding-top: 1rem;
+}
+
+.contact-intro .section-title {
+  font-size: 2.6rem;
+  line-height: 1.15;
+}
+
+.contact-intro .section-description {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: var(--color-text);
+  font-weight: 300;
+  margin-bottom: 2.5rem;
+}
+
+.contact-shield {
+  width: 90px;
+  height: 110px;
+  margin-top: 1rem;
+}
+
+.contact-shield svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* Middle Column: Contact Info */
+.contact-info {
+  flex: 0 0 28%;
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.info-icon {
+  color: var(--color-gold);
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.info-text h4 {
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  font-weight: 500;
+  color: var(--color-dark);
+  margin-bottom: 0.35rem;
+}
+
+.info-text p {
+  font-size: 0.85rem;
+  color: var(--color-text);
+  font-weight: 300;
+}
+
+/* Right Column: Form */
+.contact-form-wrap {
+  flex: 0 0 38%;
+  max-width: 480px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.form-row {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  color: var(--color-dark);
+  background-color: transparent;
+  border: 1px solid rgba(18, 18, 18, 0.15);
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: rgba(44, 42, 41, 0.5);
+  font-weight: 300;
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+  border-color: var(--color-gold);
+}
+
+.form-row .form-input {
+  flex: 1;
+}
+
+.form-select-wrap {
+  position: relative;
+  width: 100%;
+}
+
+.form-select {
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  color: rgba(44, 42, 41, 0.5);
+  padding-right: 2.5rem;
+}
+
+.form-select option {
+  color: var(--color-dark);
+}
+
+.select-arrow {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-dark);
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.form-textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.form-submit {
+  width: 100%;
+  padding: 1.1rem;
+  background-color: var(--color-dark);
+  color: var(--color-gold);
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+  font-weight: 400;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  transition: opacity 0.3s ease;
+  margin-top: 0.25rem;
+}
+
+.form-submit:hover {
+  opacity: 0.9;
+}
+
+.form-submit .arrow {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+/* ==========================================================================
+   Contact / Footer Responsive Styles
+   ========================================================================== */
+@media (max-width: 1024px) {
+  .contact {
+    padding: 5rem 2rem 4rem 2rem;
+  }
+
+  .contact-decoration {
+    display: none;
+  }
+
+  .contact-container {
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .contact-intro {
+    flex: 1;
+    max-width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-intro .section-title {
+    font-size: 2.4rem;
+  }
+
+  .contact-shield {
+    margin-top: 0.5rem;
+  }
+
+  .contact-info {
+    flex: 1;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .contact-form-wrap {
+    flex: 1;
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .form-row {
+    flex-direction: column;
+  }
+
+  .contact-intro .section-title {
+    font-size: 2rem;
+  }
+}
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+.site-footer {
+  width: 100%;
+  background-color: #3d342c;
+  padding: 5rem 4rem 0 6rem;
+}
+
+.footer-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 4rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding-bottom: 4rem;
+}
+
+/* Brand / Tagline Column */
+.footer-brand {
+  flex: 0 0 22%;
+  max-width: 260px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 0.5rem;
+}
+
+.footer-diamond-top {
+  font-size: 0.8rem;
+  color: var(--color-gold);
+  margin-bottom: 1.5rem;
+  display: block;
+}
+
+.footer-tagline {
+  font-family: var(--font-logo);
+  font-size: 1.5rem;
+  color: var(--color-gold);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.footer-divider {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.footer-line {
+  display: inline-block;
+  width: 30px;
+  height: 1px;
+  background-color: rgba(171, 142, 102, 0.35);
+}
+
+.footer-diamond-small {
+  font-size: 0.6rem;
+  color: var(--color-gold);
+}
+
+/* Link Columns */
+.footer-columns {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.footer-col {
+  flex: 1;
+  padding: 0 2rem;
+  border-right: 1px solid rgba(171, 142, 102, 0.15);
+}
+
+.footer-col:last-child {
+  border-right: none;
+  padding-right: 0;
+}
+
+.footer-col:first-child {
+  padding-left: 0;
+}
+
+.footer-col h4 {
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  font-weight: 500;
+  color: var(--color-gold);
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-bottom: 0.75rem;
+}
+
+.footer-col h4::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 24px;
+  height: 1px;
+  background-color: rgba(171, 142, 102, 0.4);
+}
+
+.footer-col ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.footer-col ul li {
+  font-size: 0.85rem;
+  color: rgba(229, 222, 213, 0.6);
+  font-weight: 300;
+}
+
+.footer-col ul li a {
+  color: rgba(229, 222, 213, 0.6);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+  color: var(--color-gold);
+}
+
+.footer-social {
+  display: inline-flex;
+  color: rgba(229, 222, 213, 0.6);
+  margin-top: 1rem;
+  transition: color 0.3s ease;
+}
+
+.footer-social:hover {
+  color: var(--color-gold);
+}
+
+/* Bottom Bar */
+.footer-bottom {
+  border-top: 1px solid rgba(171, 142, 102, 0.15);
+  padding: 1.5rem 0;
+  text-align: center;
+}
+
+.footer-bottom p {
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  color: rgba(229, 222, 213, 0.4);
+  font-weight: 400;
+}
+
+/* ==========================================================================
+   Footer Responsive Styles
+   ========================================================================== */
+@media (max-width: 1024px) {
+  .site-footer {
+    padding: 4rem 2rem 0 2rem;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    gap: 3rem;
+    align-items: center;
+  }
+
+  .footer-brand {
+    flex: 1;
+    max-width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-tagline {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+
+  .footer-columns {
+    flex: 1;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 2rem 1rem;
+  }
+
+  .footer-col {
+    flex: 0 0 45%;
+    padding: 0;
+    border-right: none;
+  }
+
+  .footer-col h4::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .footer-col h4 {
+    text-align: center;
+  }
+
+  .footer-col ul {
+    align-items: center;
+  }
+
+  .footer-col ul li {
+    text-align: center;
+  }
+
+  .footer-social {
+    align-self: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .footer-columns {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-col {
+    flex: 1;
+    width: 100%;
+    text-align: center;
+  }
+
+  .footer-col ul {
+    align-items: center;
+  }
+}
+/* ==========================================================================
+   Always With You Section — 65/35 Split
+   ========================================================================== */
+.always {
+  width: 100%;
+  display: flex;
+  min-height: 520px;
+}
+
+.always-image {
+  flex: 0 0 65%;
+  position: relative;
+  overflow: hidden;
+  min-height: 520px;
+}
+
+.always-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.always-content {
+  flex: 0 0 35%;
+  background-color: var(--color-dark);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 3rem;
+}
+
+.always-title {
+  font-family: var(--font-serif);
+  font-size: 2.8rem;
+  font-weight: 400;
+  color: var(--color-gold);
+  margin-bottom: 1.5rem;
+}
+
+.always-desc {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 300;
+  max-width: 320px;
+  margin-bottom: 2rem;
+}
+
+.always-divider {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.divider-line-h {
+  display: inline-block;
+  width: 50px;
+  height: 1px;
+  background-color: rgba(171, 142, 102, 0.35);
+}
+
+.divider-diamond {
+  font-size: 0.65rem;
+  color: var(--color-gold);
+}
+/* ==========================================================================
+   Always With You Responsive Styles
+   ========================================================================== */
+@media (max-width: 1024px) {
+  .always {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .always-image {
+    flex: 1;
+    width: 100%;
+    min-height: 350px;
+  }
+
+  .always-content {
+    flex: 1;
+    width: 100%;
+    padding: 4rem 2rem;
+  }
+
+  .always-title {
+    font-size: 2.4rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .always-image {
+    min-height: 280px;
+  }
+
+  .always-title {
+    font-size: 2rem;
+  }
+}
