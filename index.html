@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Deore & Freond</title>
   <link rel="stylesheet" href="css/styles.css">
+  <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
 
@@ -39,7 +40,7 @@
 
   <!-- Hero Section -->
   <section class="hero">
-    <img src="images/hero-banner-1.png" alt="A long-haired golden Afghan Hound rests on a polished floor in a softly sunlit, elegant room with paneled walls and a large potted tree. The calm, refined scene has no visible text." class="hero-background-img">
+    <img src="images/hero-banner-1.png" alt="A long-haired golden Afghan Hound rests in an elegant room" class="hero-background-img">
     <div class="hero-content">
       <span class="hero-subtitle">A WORLD APART</span>
       <div class="diamond-icon">◇</div>
@@ -59,7 +60,7 @@
     </div>
   </section>
 
-  <!-- Philosophy Section -->
+  <!-- Philosophy Section (Intro) -->
   <section class="philosophy" id="philosophy">
     <div class="philosophy-container">
       <div class="philosophy-text">
@@ -76,7 +77,10 @@
         <img src="images/home-about.png" alt="Elegant black vase with delicate branches on a modern pedestal">
       </div>
     </div>
+  </section>
 
+  <!-- Philosophy Cards Section (New Split Section) -->
+  <section class="philosophy-cards" id="philosophy-cards">
     <div class="philosophy-features">
       <div class="feature-item">
         <div class="feature-icon">
@@ -133,12 +137,12 @@
     </div>
   </section>
 
-    <!-- The Journey / Process Section -->
+  <!-- The Journey / Process Section -->
   <section class="journey" id="process">
     <div class="journey-container">
       <div class="journey-intro">
         <span class="section-label">THE JOURNEY</span>
-        <h2 class="section-title">A seamless experience.<br>Thoughtfully guided<br>at every step.</h2>
+        <h2 class="section-title">A seamless experience.<br>Thoughtfully guided at every step.</h2>
         <div class="content-line"></div>
         <p class="section-description">
           We make the journey as meaningful as the destination.
@@ -146,7 +150,6 @@
       </div>
 
       <div class="journey-steps">
-        <!-- Connector line behind icons -->
         <div class="steps-connector"></div>
 
         <div class="step-item">
@@ -200,23 +203,12 @@
     </div>
   </section>
 
-  <!-- Always With You Section -->
-  <section class="always">
-    <div class="always-image">
-      <img src="images/dog-and-man.png" alt="Man and dog sitting together overlooking a misty mountain valley at golden hour">
-    </div>
-    <div class="always-content">
-      <h2 class="always-title">Always with you.</h2>
-      <p class="always-desc">Our commitment continues long after your companion arrives home.</p>
-      <div class="always-divider">
-        <span class="divider-line-h"></span>
-        <span class="divider-diamond">◇</span>
-        <span class="divider-line-h"></span>
-      </div>
-    </div>
-  </section>
+ <!-- Always With You Section (Responsive Image Banner) -->
+ <section class="always-with-you-banner" id="always-with-you">
+  <img src="images/dog-and-man.jpeg" alt="Always with you" class="full-width-image">
+</section>
 
-    <!-- Services Section -->
+  <!-- Services Section -->
   <section class="services" id="services">
     <div class="services-container">
       <div class="services-intro">
@@ -229,7 +221,7 @@
           and absolute discretion.
         </p>
         <a href="#services-detail" class="services-cta">
-          DISCOVER OUR SERVICES <span class="arrow">&rarr;</span>
+             DISCOVER OUR SERVICES <span class="arrow">&rarr;</span>
         </a>
       </div>
 
@@ -311,9 +303,10 @@
         </div>
       </div>
     </div>
+    <img src="images/plant-services.png" alt="Plant" class="services-plant">
   </section>
 
-     <!-- Our Breeds Section -->
+  <!-- Our Breeds Section -->
   <section class="breeds" id="breeds">
     <div class="breeds-container">
       <div class="breeds-intro">
@@ -328,62 +321,75 @@
         </a>
       </div>
 
-      <div class="breeds-grid">
-        <div class="breed-card">
-          <img src="https://placehold.co/300x400/1a1a1a/ab8e66?text=Golden+Retriever" alt="Golden Retriever">
-          <div class="breed-overlay"></div>
-          <span class="breed-name">GOLDEN RETRIEVER</span>
+      <div class="breeds-carousel-wrapper">
+        <button class="slider-arrow left-arrow" aria-label="Previous breed">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        </button>
+        
+        <div class="breeds-slider">
+          <div class="breeds-track" id="breedsTrack">
+            <!-- Slide 1 -->
+            <div class="breed-slide">
+              <img src="images/dog2.avif" alt="Golden Retriever">
+              <div class="breed-overlay"></div>
+              <span class="breed-name">GOLDEN RETRIEVER</span>
+            </div>
+            <!-- Slide 2 -->
+            <div class="breed-slide">
+              <img src="images/dog1.jpg" alt="Labrador Retriever">
+              <div class="breed-overlay"></div>
+              <span class="breed-name">LABRADOR RETRIEVER</span>
+            </div>
+            <!-- Slide 3 -->
+            <div class="breed-slide">
+              <img src="images/dog3.jpg" alt="Australian Shepherd">
+              <div class="breed-overlay"></div>
+              <span class="breed-name">AUSTRALIAN SHEPHERD</span>
+            </div>
+            <!-- Slide 4 -->
+            <div class="breed-slide">
+              <img src="images/dog4.png" alt="Bernese Mountain Dog">
+              <div class="breed-overlay"></div>
+              <span class="breed-name">BERNESE MOUNTAIN DOG</span>
+            </div>
+            <!-- Slide 5 -->
+            <div class="breed-slide">
+              <img src="images/dog5.png" alt="Corgi Pembroke">
+              <div class="breed-overlay"></div>
+              <span class="breed-name">CORGI (PEMBROKE)</span>
+            </div>
+            <!-- Slide 6 -->
+            <div class="breed-slide">
+              <img src="images/dog6.png" alt="Shih Tzu">
+              <div class="breed-overlay"></div>
+              <span class="breed-name">SHIH TZU</span>
+            </div>
+            <!-- Slide 7 -->
+            <div class="breed-slide">
+              <img src="images/dog7.png" alt="Giant Schnauzer">
+              <div class="breed-overlay"></div>
+              <span class="breed-name">GIANT SCHNAUZER</span>
+            </div>
+            <!-- Slide 8 -->
+            <div class="breed-slide">
+              <img src="images/dog8.png" alt="Standard Poodle">
+              <div class="breed-overlay"></div>
+              <span class="breed-name">POODLE (STANDARD)</span>
+            </div>
+          </div>
         </div>
-
-        <div class="breed-card">
-          <img src="https://placehold.co/300x400/1a1a1a/ab8e66?text=Labrador" alt="Labrador Retriever">
-          <div class="breed-overlay"></div>
-          <span class="breed-name">LABRADOR RETRIEVER</span>
-        </div>
-
-        <div class="breed-card">
-          <img src="https://placehold.co/300x400/1a1a1a/ab8e66?text=Australian+Shepherd" alt="Australian Shepherd">
-          <div class="breed-overlay"></div>
-          <span class="breed-name">AUSTRALIAN SHEPHERD</span>
-        </div>
-
-        <div class="breed-card">
-          <img src="https://placehold.co/300x400/1a1a1a/ab8e66?text=Bernese+Mountain+Dog" alt="Bernese Mountain Dog">
-          <div class="breed-overlay"></div>
-          <span class="breed-name">BERNESE MOUNTAIN DOG</span>
-        </div>
-
-        <div class="breed-card">
-          <img src="https://placehold.co/300x400/1a1a1a/ab8e66?text=Corgi" alt="Corgi Pembroke">
-          <div class="breed-overlay"></div>
-          <span class="breed-name">CORGI (PEMBROKE)</span>
-        </div>
-
-        <div class="breed-card">
-          <img src="https://placehold.co/300x400/1a1a1a/ab8e66?text=Shih+Tzu" alt="Shih Tzu">
-          <div class="breed-overlay"></div>
-          <span class="breed-name">SHIH TZU</span>
-        </div>
-
-        <div class="breed-card">
-          <img src="https://placehold.co/300x400/1a1a1a/ab8e66?text=Giant+Schnauzer" alt="Giant Schnauzer">
-          <div class="breed-overlay"></div>
-          <span class="breed-name">GIANT SCHNAUZER</span>
-        </div>
-
-        <div class="breed-card">
-          <img src="https://placehold.co/300x400/1a1a1a/ab8e66?text=Standard+Poodle" alt="Standard Poodle">
-          <div class="breed-overlay"></div>
-          <span class="breed-name">POODLE (STANDARD)</span>
-        </div>
+        
+        <button class="slider-arrow right-arrow" aria-label="Next breed">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </button>
       </div>
     </div>
   </section>
 
-    <!-- Closing Statement Section -->
+  <!-- Closing Statement Section -->
   <section class="closing">
     <div class="closing-bg">
-      <img src="images/sofa.png" alt="Elegant dark study with leather Chesterfield sofa, antique lamp and framed landscape painting">
+      <img src="images/sofa.png" alt="Elegant dark study with leather sofa and antique decor">
     </div>
     <div class="closing-overlay"></div>
     <div class="closing-content">
@@ -401,8 +407,9 @@
     </div>
   </section>
 
-    <!-- Contact / Footer Section -->
+  <!-- Contact / Footer Section -->
   <section class="contact" id="contact">
+    <img src="images/plant-getin.png" alt="Plant" class="contact-plant">
     <div class="contact-decoration">
       <svg width="120" height="300" viewBox="0 0 120 300" fill="none">
         <path d="M60 300 Q30 250 40 200 Q50 150 30 100 Q20 60 60 20 Q80 60 70 100 Q60 150 80 200 Q90 250 60 300" stroke="#c4b8a8" stroke-width="0.8" fill="none"/>
@@ -420,7 +427,6 @@
     </div>
 
     <div class="contact-container">
-      <!-- Left Column: Intro -->
       <div class="contact-intro">
         <span class="section-label">GET IN TOUCH</span>
         <h2 class="section-title">We'd love to hear<br>from you.</h2>
@@ -430,17 +436,16 @@
         </p>
 
         <div class="contact-shield">
-          <svg viewBox="0 0 100 120" fill="none" stroke="#ab8e66" stroke-width="1.2">
+          <svg viewBox="0 0 100 120" fill="none" stroke="#826227" stroke-width="1.2">
             <path d="M50 8 L88 22 L88 56 C88 82 50 112 50 112 C50 112 12 82 12 56 L12 22 Z"/>
-            <text x="50" y="52" text-anchor="middle" font-family="Cormorant Garamond, Georgia, serif" font-size="22" fill="#ab8e66" stroke="none">D&F</text>
-            <path d="M42 78 C42 72 46 68 50 68 C54 68 58 72 58 78 C58 84 54 88 50 92 C46 88 42 84 42 78 Z" fill="#ab8e66" stroke="none" opacity="0.8"/>
+            <text x="50" y="52" text-anchor="middle" font-family="Cormorant Garamond, Georgia, serif" font-size="22" fill="#826227" stroke="none">D&F</text>
+            <path d="M42 78 C42 72 46 68 50 68 C54 68 58 72 58 78 C58 84 54 88 50 92 C46 88 42 84 42 78 Z" fill="#826227" stroke="none" opacity="0.8"/>
             <circle cx="47" cy="75" r="1.5" fill="#e5ded5" stroke="none"/>
             <circle cx="53" cy="75" r="1.5" fill="#e5ded5" stroke="none"/>
           </svg>
         </div>
       </div>
 
-      <!-- Middle Column: Contact Info -->
       <div class="contact-info">
         <div class="info-item">
           <div class="info-icon">
@@ -507,14 +512,13 @@
         </div>
       </div>
 
-      <!-- Right Column: Form -->
       <div class="contact-form-wrap">
         <form class="contact-form" onsubmit="event.preventDefault();">
           <div class="form-row">
-            <input type="text" placeholder="First Name" class="form-input">
-            <input type="text" placeholder="Last Name" class="form-input">
+            <input type="text" placeholder="First Name" class="form-input" required>
+            <input type="text" placeholder="Last Name" class="form-input" required>
           </div>
-          <input type="email" placeholder="Email Address" class="form-input">
+          <input type="email" placeholder="Email Address" class="form-input" required>
           <input type="tel" placeholder="Phone Number" class="form-input">
           <div class="form-select-wrap">
             <select class="form-select">
@@ -528,7 +532,7 @@
               <polyline points="6 9 12 15 18 9"></polyline>
             </svg>
           </div>
-          <textarea placeholder="Your Message" class="form-textarea"></textarea>
+          <textarea placeholder="Your Message" class="form-textarea" required></textarea>
           <button type="submit" class="form-submit">
             SEND MESSAGE <span class="arrow">&rarr;</span>
           </button>
@@ -537,7 +541,7 @@
     </div>
   </section>
 
-    <!-- Footer -->
+  <!-- Footer -->
   <footer class="site-footer">
     <div class="footer-container">
       <div class="footer-brand">
@@ -586,7 +590,7 @@
           <h4>CONNECT</h4>
           <ul>
             <li>Worldwide by invitation.</li>
-            <li><a href="mailto:info@deorefreond.com">info@deorefreond.com</a></li>
+            <li><a href="mailto:info@deoreandfreond.com">info@deoreandfreond.com</a></li>
           </ul>
           <a href="#" class="footer-social" aria-label="Instagram">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
@@ -598,12 +602,11 @@
         </div>
       </div>
     </div>
-
-    <div class="footer-bottom">
+  <div class="footer-bottom">
       <p>© 2026 DEORE & FREOND. ALL RIGHTS RESERVED.</p>
     </div>
   </footer>
-  
+
   <script src="js/script.js"></script>
 </body>
 </html>
